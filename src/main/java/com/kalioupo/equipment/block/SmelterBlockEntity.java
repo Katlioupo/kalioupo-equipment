@@ -12,7 +12,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemStackTemplate;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.ValueInput;
@@ -112,11 +115,32 @@ public class SmelterBlockEntity extends BlockEntity implements Container, Worldl
 
 	private void consumeFuel() {
 		ItemStack fuel = this.items.get(FUEL_SLOT);
+		ItemStack remainder = fuelRemainder(fuel);
+
 		fuel.shrink(1);
 
-		if (fuel.isEmpty()) {
-			this.items.set(FUEL_SLOT, ItemStack.EMPTY);
+		if (!fuel.isEmpty()) {
+			// container fuels stack to one, so this only happens for odd stacks; better to drop the
+			// leftover than to swallow it
+			if (!remainder.isEmpty() && this.level != null) {
+				Block.popResource(this.level, this.worldPosition, remainder);
+			}
+
+			return;
 		}
+
+		this.items.set(FUEL_SLOT, remainder);
+	}
+
+	/** Lava buckets hand back their empty bucket, the same way a furnace does. */
+	private static ItemStack fuelRemainder(ItemStack fuel) {
+		ItemStackTemplate template = fuel.getCraftingRemainder();
+
+		if (template != null) {
+			return template.create();
+		}
+
+		return fuel.is(Items.LAVA_BUCKET) ? new ItemStack(Items.BUCKET) : ItemStack.EMPTY;
 	}
 
 	private void craft(SmelterRecipes.SmeltRecipe recipe) {
@@ -242,11 +266,17 @@ public class SmelterBlockEntity extends BlockEntity implements Container, Worldl
 	 *
 	 * <p>Without this a hopper below pulled from <b>every</b> slot, so it happily drained the items
 	 * that were waiting to be smelted. Now the bottom face can only take the output, the top face
-	 * only feeds the input, and the sides add the fuel slot.</p>
+	 * only feeds the input, and the sides feed the fuel slot first and may also top up the input.</p>
+	 *
+	 * <p>The side order matters: a hopper fills the first slot it is allowed to use, so the fuel
+	 * slot has to come first. It is also why {@link #canPlaceItemThroughFace} keeps fuel items out
+	 * of the input slots on the sides - coal is a real ingredient here (carbon steel), so without
+	 * that split a side hopper emptied its whole load into the input and the fuel slot stayed
+	 * empty, which made fuel impossible to automate from the side at all.</p>
 	 */
 	private static final int[] OUTPUT = {OUTPUT_SLOT};
 	private static final int[] INPUT = {0, 1, 2, 3, 4};
-	private static final int[] INPUT_AND_FUEL = {0, 1, 2, 3, 4, FUEL_SLOT};
+	private static final int[] FUEL_AND_INPUT = {FUEL_SLOT, 0, 1, 2, 3, 4};
 
 	@Override
 	public int[] getSlotsForFace(Direction direction) {
@@ -254,12 +284,25 @@ public class SmelterBlockEntity extends BlockEntity implements Container, Worldl
 			return OUTPUT;
 		}
 
-		return direction == Direction.UP ? INPUT : INPUT_AND_FUEL;
+		return direction == Direction.UP ? INPUT : FUEL_AND_INPUT;
 	}
 
 	@Override
 	public boolean canPlaceItemThroughFace(int slot, ItemStack stack, Direction direction) {
-		return direction != Direction.DOWN && canPlaceItem(slot, stack);
+		if (direction == Direction.DOWN) {
+			return false;
+		}
+
+		if (direction == Direction.UP) {
+			return slot != FUEL_SLOT && canPlaceItem(slot, stack);
+		}
+
+		// sided: anything that burns may only go to the fuel slot, everything else to the input
+		if (SmelterRecipes.burnTime(stack) > 0) {
+			return slot == FUEL_SLOT;
+		}
+
+		return slot != FUEL_SLOT && canPlaceItem(slot, stack);
 	}
 
 	@Override
