@@ -1,4 +1,4 @@
-# 用 GitHub API 发一个 Release 并上传 jar。
+﻿# 用 GitHub API 发一个 Release 并上传 jar。
 #
 # 令牌只在这个脚本的内存里用，不会写进任何文件，也不会出现在对话里。
 # 用法：
