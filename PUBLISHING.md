@@ -150,7 +150,7 @@ Kalioupo's Interesting Equipment 有趣的装备
 ## 5. 日常更新流程（改完代码之后）
 
 ```powershell
-cd "C:\Users\Administrator\Documents\deepseek-harness\default-workspace\kalioupo-equipment"
+cd "你的工作目录\kalioupo-equipment"
 
 $env:JAVA_HOME='C:\Program Files\Eclipse Adoptium\jdk-25.0.3.9-hotspot'
 .\gradlew.bat build --offline --no-daemon
