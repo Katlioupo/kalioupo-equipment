@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": "kalioupo_equipment:quartz_steel_ingot",
+    "#": "minecraft:stick"
+  },
+  "pattern": [
+    "X",
+    "X",
+    "#"
+  ],
+  "result": {
+    "id": "kalioupo_equipment:quartz_steel_sword",
+    "count": 1
+  }
+}

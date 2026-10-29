@@ -1,0 +1,22 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "minecraft:using_item",
+    "on_false": {
+      "type": "minecraft:special",
+      "base": "kalioupo_equipment:item/bedrock_shield_glow",
+      "model": {
+        "type": "kalioupo_equipment:shield",
+        "texture": "kalioupo_equipment:textures/item/bedrock_shield_glow.png"
+      }
+    },
+    "on_true": {
+      "type": "minecraft:special",
+      "base": "kalioupo_equipment:item/bedrock_shield_glow_blocking",
+      "model": {
+        "type": "kalioupo_equipment:shield",
+        "texture": "kalioupo_equipment:textures/item/bedrock_shield_glow.png"
+      }
+    }
+  }
+}

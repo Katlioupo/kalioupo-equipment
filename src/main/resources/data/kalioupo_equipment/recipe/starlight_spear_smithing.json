@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "minecraft:diamond",
+  "base": "kalioupo_equipment:echo_spear",
+  "addition": "kalioupo_equipment:starlight_alloy_ingot",
+  "result": {
+    "id": "kalioupo_equipment:starlight_spear",
+    "count": 1
+  }
+}

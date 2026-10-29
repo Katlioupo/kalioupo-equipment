@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "kalioupo_equipment:block/socket_table"
+    }
+  }
+}

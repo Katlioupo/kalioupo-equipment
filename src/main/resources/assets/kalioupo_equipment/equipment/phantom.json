@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "kalioupo_equipment:phantom"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "kalioupo_equipment:phantom"
+      }
+    ],
+    "wings": [
+      {
+        "texture": "kalioupo_equipment:phantom"
+      }
+    ]
+  }
+}

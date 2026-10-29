@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "minecraft:obsidian",
+  "base": "minecraft:diamond_axe",
+  "addition": "kalioupo_equipment:compressed_obsidian_alloy",
+  "result": {
+    "id": "kalioupo_equipment:obsidian_axe",
+    "count": 1
+  }
+}

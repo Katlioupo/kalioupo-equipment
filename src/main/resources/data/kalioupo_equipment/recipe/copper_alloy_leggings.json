@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": "kalioupo_equipment:copper_alloy_ingot"
+  },
+  "pattern": [
+    "XXX",
+    "X X",
+    "X X"
+  ],
+  "result": {
+    "id": "kalioupo_equipment:copper_alloy_leggings",
+    "count": 1
+  }
+}

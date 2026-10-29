@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "kalioupo_equipment",
+	"version": "${version}",
+	"name": "Kalioupo's Interesting Equipment 有趣的装备",
+	"description": "More equipment, more fun: 11 tiers of swords, tools, armour and shields, with active skills, a smelter and a backpack. 更多有趣装备：11 级剑 / 工具 / 盔甲 / 盾牌，附带主动技能、熔炼炉与背包。",
+	"icon": "assets/kalioupo_equipment/icon.png",
+	"authors": ["Kalioupo"],
+	"contributors": ["DeepSeek AI"],
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["com.kalioupo.equipment.KalioupoEquipment"],
+		"client": ["com.kalioupo.equipment.client.KalioupoEquipmentClient"],
+		"modmenu": ["com.kalioupo.equipment.client.ModMenuIntegration"],
+		"jei_mod_plugin": ["com.kalioupo.equipment.compat.SmelterJeiPlugin"]
+	},
+	"accessWidener": "kalioupo_equipment.accesswidener",
+	"mixins": [
+		{
+			"config": "kalioupo_equipment.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.0",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"cloth-config": "*",
+		"modmenu": "*",
+		"jei": ">=31.0.0"
+	}
+}

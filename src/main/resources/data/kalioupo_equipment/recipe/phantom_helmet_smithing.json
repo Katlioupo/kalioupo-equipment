@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "kalioupo_equipment:phantom_ingot",
+  "base": "minecraft:diamond_helmet",
+  "addition": "kalioupo_equipment:phantom_ingot",
+  "result": {
+    "id": "kalioupo_equipment:phantom_helmet",
+    "count": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "kalioupo_equipment:phantom_ingot",
+  "base": "minecraft:diamond_leggings",
+  "addition": "kalioupo_equipment:phantom_ingot",
+  "result": {
+    "id": "kalioupo_equipment:phantom_leggings",
+    "count": 1
+  }
+}

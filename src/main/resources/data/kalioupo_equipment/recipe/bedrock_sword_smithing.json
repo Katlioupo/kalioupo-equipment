@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "kalioupo_equipment:bedrock_shard",
+  "base": "kalioupo_equipment:obsidian_sword",
+  "addition": "kalioupo_equipment:bedrock_shard",
+  "result": {
+    "id": "kalioupo_equipment:bedrock_sword",
+    "count": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": "kalioupo_equipment:carbon_steel_ingot"
+  },
+  "pattern": [
+    "XXX",
+    "X X",
+    "X X"
+  ],
+  "result": {
+    "id": "kalioupo_equipment:carbon_steel_leggings",
+    "count": 1
+  }
+}

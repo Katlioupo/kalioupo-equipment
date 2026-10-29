@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "awarded": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "kalioupo_equipment:echo_chestplate"
+    },
+    "title": {
+      "translate": "advancements.kalioupo_equipment.peak.title"
+    },
+    "description": {
+      "translate": "advancements.kalioupo_equipment.peak.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "sends_telemetry_event": false,
+  "parent": "kalioupo_equipment:road_to_godhood"
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "kalioupo_equipment:obsidian_shield",
+    "minecraft:glowstone"
+  ],
+  "result": {
+    "id": "kalioupo_equipment:obsidian_shield_glow",
+    "count": 1
+  }
+}

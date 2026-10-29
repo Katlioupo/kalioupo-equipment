@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "minecraft:diamond",
+  "base": "kalioupo_equipment:echo_boots",
+  "addition": "kalioupo_equipment:starlight_alloy_ingot",
+  "result": {
+    "id": "kalioupo_equipment:starlight_boots",
+    "count": 1
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "awarded": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "kalioupo_equipment:starlight_sword"
+    },
+    "title": {
+      "translate": "advancements.kalioupo_equipment.king_of_the_world.title"
+    },
+    "description": {
+      "translate": "advancements.kalioupo_equipment.king_of_the_world.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "sends_telemetry_event": false,
+  "parent": "kalioupo_equipment:peak"
+}

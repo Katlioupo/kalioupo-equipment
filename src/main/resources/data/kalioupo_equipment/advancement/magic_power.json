@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "awarded": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "kalioupo_equipment:amethyst_sword"
+    },
+    "title": {
+      "translate": "advancements.kalioupo_equipment.magic_power.title"
+    },
+    "description": {
+      "translate": "advancements.kalioupo_equipment.magic_power.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "sends_telemetry_event": false,
+  "parent": "kalioupo_equipment:stronger_metal"
+}

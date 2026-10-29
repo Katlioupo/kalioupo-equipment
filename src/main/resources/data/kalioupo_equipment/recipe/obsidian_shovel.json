@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": "kalioupo_equipment:compressed_obsidian_alloy",
+    "#": "minecraft:stick"
+  },
+  "pattern": [
+    "X",
+    "#",
+    "#"
+  ],
+  "result": {
+    "id": "kalioupo_equipment:obsidian_shovel",
+    "count": 1
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "kalioupo_equipment:item/starlight_leggings"
+  }
+}

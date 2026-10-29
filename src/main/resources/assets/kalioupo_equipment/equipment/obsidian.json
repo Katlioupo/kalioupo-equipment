@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "kalioupo_equipment:obsidian"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "kalioupo_equipment:obsidian"
+      }
+    ]
+  }
+}

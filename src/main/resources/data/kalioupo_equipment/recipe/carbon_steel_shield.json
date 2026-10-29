@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XGX",
+    "XXX",
+    " X "
+  ],
+  "key": {
+    "X": "kalioupo_equipment:carbon_steel_ingot",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "kalioupo_equipment:carbon_steel_shield",
+    "count": 1
+  }
+}

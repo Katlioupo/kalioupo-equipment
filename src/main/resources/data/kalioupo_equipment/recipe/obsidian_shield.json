@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XOX",
+    "XXX",
+    " X "
+  ],
+  "key": {
+    "X": "minecraft:obsidian",
+    "O": "kalioupo_equipment:compressed_obsidian_alloy"
+  },
+  "result": {
+    "id": "kalioupo_equipment:obsidian_shield",
+    "count": 1
+  }
+}

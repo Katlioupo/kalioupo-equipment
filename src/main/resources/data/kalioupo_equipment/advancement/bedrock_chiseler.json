@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "awarded": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "kalioupo_equipment:bedrock_shard"
+    },
+    "title": {
+      "translate": "advancements.kalioupo_equipment.bedrock_chiseler.title"
+    },
+    "description": {
+      "translate": "advancements.kalioupo_equipment.bedrock_chiseler.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "sends_telemetry_event": false,
+  "parent": "kalioupo_equipment:obsidian_power"
+}

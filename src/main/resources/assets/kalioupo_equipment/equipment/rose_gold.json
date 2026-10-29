@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "kalioupo_equipment:rose_gold"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "kalioupo_equipment:rose_gold"
+      }
+    ]
+  }
+}

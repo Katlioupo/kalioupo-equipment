@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "kalioupo_equipment:bedrock_shard",
+  "base": "kalioupo_equipment:obsidian_shield_glow",
+  "addition": "kalioupo_equipment:bedrock_shard",
+  "result": {
+    "id": "kalioupo_equipment:bedrock_shield_glow",
+    "count": 1
+  }
+}

@@ -1,0 +1,90 @@
+================================================================
+Kalioupo's 有趣装备 — 物品命名清单（待翻译）
+使用方式：在「英文名」一列填上翻译结果即可；id 我已经定好，不用改。
+================================================================
+
+【材料】
+中文名                  id（固定）                        英文名（待填）
+------------------------------------------------------------------
+碳钢锭                  carbon_steel_ingot
+石英钢锭                quartz_steel_ingot
+铜合金锭                copper_alloy_ingot
+玫瑰金锭                rose_gold_ingot
+海晶合金锭              prismarine_alloy_ingot
+紫水晶合金锭            amethyst_alloy_ingot
+幻翼锭                  phantom_ingot
+回响合金锭              echo_alloy_ingot
+星辉合金锭              starlight_alloy_ingot
+基岩碎片                bedrock_shard
+基岩碎片·白热化         heated_bedrock_shard
+
+【碳钢系列】（前期主力）
+碳钢头盔                carbon_steel_helmet
+碳钢胸甲                carbon_steel_chestplate
+碳钢护腿                carbon_steel_leggings
+碳钢靴子                carbon_steel_boots
+碳钢剑                  carbon_steel_sword
+碳钢镐                  carbon_steel_pickaxe
+碳钢斧                  carbon_steel_axe
+碳钢锹                  carbon_steel_shovel
+碳钢锄                  carbon_steel_hoe
+碳钢矛                  carbon_steel_spear
+
+【其他系列】
+石英钢剑                quartz_steel_sword
+铜合金头盔              copper_alloy_helmet
+铜合金胸甲              copper_alloy_chestplate
+铜合金护腿              copper_alloy_leggings
+铜合金靴子              copper_alloy_boots
+玫瑰金剑                rose_gold_sword
+玫瑰金胸甲              rose_gold_chestplate
+海晶头盔                prismarine_helmet
+海晶靴子                prismarine_boots
+紫水晶剑                amethyst_sword
+幻翼胸甲                phantom_chestplate
+幻翼护腿                phantom_leggings
+幻翼靴子                phantom_boots
+
+【后期线】
+黑曜石头盔              obsidian_helmet
+黑曜石胸甲              obsidian_chestplate
+黑曜石护腿              obsidian_leggings
+黑曜石靴子              obsidian_boots
+黑曜石剑                obsidian_sword
+黑曜石镐                obsidian_pickaxe
+黑曜石斧                obsidian_axe
+黑曜石锹                obsidian_shovel
+黑曜石锄                obsidian_hoe
+黑曜石矛                obsidian_spear
+基岩强化装备（升级）     [同一件装备 + 升级等级，见下方说明]
+回响强化装备（升级）
+星辉强化装备（升级）
+
+【盾牌】
+碳钢盾牌                carbon_steel_shield
+碳钢发光盾牌            carbon_steel_shield_glow
+黑曜石盾牌              obsidian_shield
+黑曜石发光盾牌          obsidian_shield_glow
+基岩强化盾牌            bedrock_shield
+基岩强化发光盾牌        bedrock_shield_glow
+
+【方块】
+冶炼炉                  smelter
+
+================================================================
+关于「升级线」的实现方式（需要你选一个）
+----------------------------------------------------------------
+方案 A（推荐）：不新增物品，用组件记录升级等级
+  - 黑曜石剑 → 锻造台 + 基岩碎片 → 还是"黑曜石剑"这个物品，
+    多一个 "bedrock" 升级标记；属性、名字前缀、贴图叠加随之变化
+  - 优点：物品数量少、配方简单、能一路升到星辉
+  - 缺点：需要额外做名字/贴图的分级显示
+
+方案 B：每一级都是新物品
+  - 黑曜石剑、基岩剑、回响剑、星辉剑……每级都要新 id、新贴图
+  - 物品数量会翻 3 倍（光剑就 4 把）
+  - 优点：直观，NEI/JEI 里看得清楚
+  - 缺点：工作量大幅增加
+
+我建议 A。你确认后，我按 A 来规划升级线和成就。
+================================================================

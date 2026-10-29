@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "awarded": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "kalioupo_equipment:socket_table"
+    },
+    "title": {
+      "translate": "advancements.kalioupo_equipment.first_socket.title"
+    },
+    "description": {
+      "translate": "advancements.kalioupo_equipment.first_socket.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "sends_telemetry_event": false,
+  "parent": "kalioupo_equipment:stronger_metal"
+}
