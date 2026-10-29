@@ -50,6 +50,30 @@ git push -u origin main
 
 第一次 push 会弹出浏览器让你登录 GitHub，点同意即可。
 
+### 仓库信息（About / Topics）
+
+仓库页面右上角 **⚙ About** 里填三样东西：
+
+**Description**（复制这一段）：
+
+```
+Minecraft 26.3 Fabric mod: 11 tiers of tools, armour and shields, active skills, a smelter, a backpack and a socket table that lets old gear keep working. 有趣的装备：11 级装备线 + 主动技能 + 熔炼炉 + 背包 + 镶嵌台（副位）。
+```
+
+**Website**：填 Modrinth 项目地址（发布后才有，先留空）
+
+**Topics**（一个格子一个，回车确认）：
+
+```
+minecraft fabric minecraft-mod fabric-mod equipment armor tools magic
+technologymod minecraft-26-3
+```
+
+**License**：GitHub 会按 `LICENSE` 文件自动识别，我们的自定义许可证会显示成
+"Unknown license"——这是正常的，不影响发布。如果你想要一个 GitHub 认得的标签，
+只能换成 MIT / Apache-2.0 这类标准许可证，但它们允许别人闭源再发布甚至卖钱，
+和现在的条款冲突，所以建议保持自定义。
+
 ### 发版本（Release）
 
 1. 打开仓库页面 → 右侧 **Releases** → **Draft a new release**
@@ -122,6 +146,25 @@ Kalioupo's Interesting Equipment 有趣的装备
   这样别人 clone 下来也能离线构建；运行时不需要它
 - 许可证：[`LICENSE`](LICENSE)（允许整合包收录，转载需署名，禁止售卖）
 - 版本说明与更新日志：[`CHANGELOG.md`](CHANGELOG.md)
+
+## 5. 日常更新流程（改完代码之后）
+
+```powershell
+cd "C:\Users\Administrator\Documents\deepseek-harness\default-workspace\kalioupo-equipment"
+
+$env:JAVA_HOME='C:\Program Files\Eclipse Adoptium\jdk-25.0.3.9-hotspot'
+.\gradlew.bat build --offline --no-daemon
+
+git add -A
+git commit -m "1.2.9: 改了什么"
+git push
+
+# 想发版就再打个标签，然后按上面第 1 节的步骤发 Release
+git tag v1.2.9
+git push origin v1.2.9
+```
+
+版本号在 `gradle.properties` 的 `mod_version` 里改；`CHANGELOG.md` 记得加一段。
 
 ## 常见问题
 

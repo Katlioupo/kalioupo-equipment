@@ -1,18 +1,22 @@
 # Kalioupo's 有趣的装备
 
-一套从**碳钢**一路做到**星辉**的装备扩展：11 级材料、6 种工具、4 件套盔甲、3 档盾牌、紫水晶充能技能、回响与星辉的主动技，还有熔炼炉和背包。
+一套从**碳钢**一路做到**星辉**的装备扩展：11 级材料、6 种工具、4 件套盔甲、3 档盾牌、可召雷的紫水晶剑、回响与星辉的主动技，还有熔炼炉、背包，以及让旧装备不报废的**镶嵌台（副位）**。
 
 - Minecraft **26.3**（Fabric）
 - Mod ID：`kalioupo_equipment`
 - 需要 **Fabric Loader 0.19.5+** 与 **Fabric API 0.163.0+26.3**
 - 可选：Mod Menu、Cloth Config（背包容量配置）、JEI（配方查看）
 
-> **稳定正式版：1.1.0**。配方、数值、渲染位置都已定型，这一版可以长期玩、也可以拿去发布。
-> 之后的「副位（镶嵌）」系统属于新内容，会以独立版本号继续更新，出问题随时退回 1.1.0。
+## 下载
+
+- 玩家下载与更新日志：**Modrinth**（发布后填这里）／[GitHub Releases](https://github.com/Katlioupo/kalioupo-equipment/releases)
+- 源码、问题反馈：[GitHub 仓库](https://github.com/Katlioupo/kalioupo-equipment)
+- 当前版本 **1.2.8**（稳定）
 
 ---
 
 ## 安装
+
 
 1. 安装 Fabric Loader 0.19.5 或更新版本，游戏版本选 26.3。
 2. 把 `kalioupo-equipment-x.y.z.jar` 丢进 `.minecraft/mods`。
@@ -251,4 +255,10 @@
 
 ## 许可
 
-代码与素材由 Kalioupo 制作。转载/整合包使用请保留出处。
+代码与素材由 Kalioupo 制作，完整条款见 [LICENSE](LICENSE)：
+
+- **免费游玩、录制、直播**
+- **整合包可以直接收录**，不需要单独申请
+- **可以改**，但二次分发时需注明作者 Kalioupo 与本模组名称，并说明改了什么
+- **不可以**当作原创发布、不可以售卖
+

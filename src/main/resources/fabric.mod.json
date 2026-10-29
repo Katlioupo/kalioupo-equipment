@@ -7,7 +7,7 @@
 	"icon": "assets/kalioupo_equipment/icon.png",
 	"authors": ["Kalioupo"],
 	"contributors": ["DeepSeek AI"],
-	"license": "MIT",
+	"license": "Custom (see LICENSE)",
 	"environment": "*",
 	"entrypoints": {
 		"main": ["com.kalioupo.equipment.KalioupoEquipment"],
