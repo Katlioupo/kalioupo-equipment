@@ -33,7 +33,12 @@ import java.util.UUID;
  */
 public final class GlowLight {
 	private static final int INTERVAL = 10;
-	private static final int LIGHT_LEVEL = 15;
+	/**
+	 * 12 rather than 15: a light block inside your own space is like holding a glowstone to your
+	 * face, and with shaders the full-bright block washed out half the screen. 12 still stops
+	 * hostile spawns (the threshold is 8) and still lights a cave, it just is not blinding.
+	 */
+	private static final int LIGHT_LEVEL = 12;
 	/** how far up the search climbs when the player is standing in water */
 	private static final int MAX_RISE = 4;
 

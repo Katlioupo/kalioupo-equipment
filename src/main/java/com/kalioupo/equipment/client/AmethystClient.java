@@ -170,13 +170,19 @@ public final class AmethystClient {
 		}
 	}
 
-	/** The glint is invisible under some shader packs, so the blade also sheds starlight. */
+	/**
+	 * The glint is invisible under some shader packs, so the blade also sheds starlight.
+	 *
+	 * <p>Sparse on purpose: the emitter sits just off the blade tip instead of in front of the
+	 * camera, and one particle every 8 ticks is enough to read as "this thing glows" without
+	 * parking a bright dot in the middle of the screen while you aim at something below you.</p>
+	 */
 	private static void spawnStarlightSparkle(Minecraft client) {
 		if (!holdingStarlight(client) || client.level == null) {
 			return;
 		}
 
-		if (client.player.tickCount % 4 != 0) {
+		if (client.player.tickCount % 8 != 0) {
 			return;
 		}
 
@@ -185,15 +191,15 @@ public final class AmethystClient {
 		side = side.lengthSqr() < 1.0E-4 ? new Vec3(1.0, 0.0, 0.0) : side.normalize();
 
 		Vec3 hand = client.player.getEyePosition()
-			.add(look.scale(0.6))
-			.add(side.scale(0.3))
-			.add(0.0, -0.3, 0.0);
+			.add(look.scale(0.95))
+			.add(side.scale(0.46))
+			.add(0.0, -0.46, 0.0);
 
 		client.level.addParticle(
 			ParticleTypes.END_ROD,
-			hand.x + (client.player.getRandom().nextDouble() - 0.5) * 0.35,
-			hand.y + (client.player.getRandom().nextDouble() - 0.5) * 0.35,
-			hand.z + (client.player.getRandom().nextDouble() - 0.5) * 0.35,
+			hand.x + (client.player.getRandom().nextDouble() - 0.5) * 0.15,
+			hand.y + (client.player.getRandom().nextDouble() - 0.5) * 0.15,
+			hand.z + (client.player.getRandom().nextDouble() - 0.5) * 0.15,
 			0.0, 0.01, 0.0
 		);
 	}
